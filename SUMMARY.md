@@ -4,8 +4,8 @@
 
 ## golang
 
-* [slice 学习](golang/slice-xue-xi.md)
-* [Untitled](golang/untitled-1.md)
+* [slice 学习.md](golang/slice-xue-xi.md)
+* [net/http初步学习.md](golang/untitled-1.md)
 
 ## mysql
 
