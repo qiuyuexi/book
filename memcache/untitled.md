@@ -1,8 +1,4 @@
----
-description: key过期排查
----
-
-# key过期排查.md
+# key过期排查
 
 php设置key-value,过期时间300s。
 

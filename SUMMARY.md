@@ -4,8 +4,8 @@
 
 ## golang
 
-* [slice 学习.md](golang/slice-xue-xi.md)
-* [net/http初步学习.md](golang/untitled-1.md)
+* [slice 学习](golang/slice-xue-xi.md)
+* [net/http初步学习](golang/untitled-1.md)
 
 ## mysql
 
@@ -13,11 +13,12 @@
 
 ## memcache
 
-* [key过期排查.md](memcache/untitled.md)
+* [key过期排查](memcache/untitled.md)
+* [Untitled](memcache/untitled-1.md)
 
 ## redis
 
-* [redis 布隆过滤器与位图.md](redis/untitled.md)
+* [redis 布隆过滤器与位图](redis/untitled.md)
 
 ## 杂项
 

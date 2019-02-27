@@ -1,4 +1,4 @@
-# slice 学习.md
+# slice 学习
 
 ```text
 ``` go
