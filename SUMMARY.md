@@ -9,12 +9,9 @@
 
 ## mysql
 
-* [Untitled](mysql/untitled.md)
-
 ## memcache
 
-* [key过期排查](memcache/untitled.md)
-* [Untitled](memcache/untitled-1.md)
+* [key过期排查](memcache/key-guo-qi-pai-cha.md)
 
 ## redis
 
