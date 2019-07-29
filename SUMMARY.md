@@ -6,8 +6,12 @@
 
 * [slice 学习](golang/slice-xue-xi.md)
 * [net/http初步学习](golang/untitled-1.md)
+* [go 与php](golang/go-yu-php.md)
 
 ## mysql
+
+* [mysql connect 连接花费几百ms](mysql/mysql-connect-lian-jie-hua-fei-ji-bai-ms.md)
+* [emoji 查询](mysql/emoji-cha-xun.md)
 
 ## memcache
 
