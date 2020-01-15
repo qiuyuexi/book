@@ -1,0 +1,5 @@
+memcache 查询不存在的数据响应时间为40ms
+客户端使用二进制协议时，mc使用get_key quietly_request 查询数据，如果没有数据 则不返回(40ms后，服务端返回ack)
+客户端发送 no-op request 来检测是否有查询到数据
+服务端返回 no-op response 确认没有查询到数据
+所以，在客户端实例化时，设置Memcached::OPT_TCP_NODELAY= true
