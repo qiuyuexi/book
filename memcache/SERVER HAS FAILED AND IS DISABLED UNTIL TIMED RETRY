@@ -1,0 +1,10 @@
+ SERVER HAS FAILED AND IS DISABLED UNTIL TIMED RETRY
+
+ 1  测试环境服务异常，查看日志，发现mc提示SERVER HAS FAILED AND IS DISABLED UNTIL TIMED RETRY , 开始排查问题。
+ 2 怀疑mc实例有问题，进容器，安装telnet，使用telnet测试过后发现mc是正常的。但是错误日志不断增加，继续排查。
+ 3  使用tcpdump抓了一会包，发现也是正常的，一时间无从下手。
+ 4  联系dba，讨论一番后，给了一个命令,netstat -anlp |grep mcPort , 多执行几次后发现
+	    tcp       24   0     ip:port          ip:port           ESTABLISHED - 
+ 5  发现 Recv-Q 堆积， 根据日志，注释掉了一些代码。服务恢复了正常，但是还是会有少量的 SERVER HAS FAILED AND IS DISABLED UNTIL TIMED RETRY 
+ 6 这个服务运行了很久，代码存在很久了。同时查看了生产环境，生产环境一切正常，怀疑mc做了什么调整导致。
+ 7 先临时恢复测试环境，保证业务接入正常。当前注释代码不影响服务功能。同时联系dba继续排查
