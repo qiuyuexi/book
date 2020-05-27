@@ -1,0 +1,25 @@
+[toc]
+
+ # 记录一个低级错误
+
+* 代码大致如下
+```php
+
+	$iterator = null;
+	while ($iterator !== 0) {
+       $result = $redisConn->hScan($key, $iterator);
+       if ($result) {
+           foreach ($result as $key => $v) {
+              if (!empty($v)) {
+                  $data [$key] = unserialize($v);
+               }
+           }
+        }
+   }
+```
+
+* 代码比较简单， 就是redis 遍历获取哈希表的数据，发现数据大于10的时候取不全，一时没发现有什么问题 。
+* 通过tcpdump抓包，发现客户端发送的数据包内容分别是
+	* Flags [P.], seq 38:117, ack 6, win 8192, length 79: RESP "HSCAN" "key" "0"
+	* Flags [P.], seq 117:146, ack 1084, win 8192, length 29: RESP "HSCAN" "9" "9" 
+* 发现 第二次请求时,key变成9了，仔细看一下代码，发现是foreach把key重置了。。十分低级的错误。
