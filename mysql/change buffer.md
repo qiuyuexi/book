@@ -13,5 +13,5 @@ http://mysql.taobao.org/monthly/2015/07/01/
   * 缓冲池空间不够
   * redo log写满
 * 适合场景
-  *写多读少
+  * 写多读少
   * 唯一索引较少
