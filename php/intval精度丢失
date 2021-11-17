@@ -1,3 +1,0 @@
-新需求，需要对2位小数的浮点数处理，发现intval出现精度丢失的问题，intval(16.65 * 100) = 1664 搜索了一波，发现是个人问题，没关注到这里。标记一下
-https://www.laruence.com/2013/03/26/2884.html
-*  最后采用了https://www.php.net/manual/zh/function.bcmul
